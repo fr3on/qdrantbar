@@ -1,0 +1,55 @@
+name: Release
+
+# Push a tag such as v0.2.0 to build the DMG and prepare a draft release. The tag must match the VERSION file.
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build and draft release
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Check tag matches VERSION
+        run: |
+          VERSION="$(tr -d '[:space:]' < VERSION)"
+          if [ "${GITHUB_REF_NAME#v}" != "${VERSION}" ]; then
+            echo "Tag ${GITHUB_REF_NAME} does not match VERSION (${VERSION}). Update VERSION and CHANGELOG.md, then tag again."
+            exit 1
+          fi
+
+      - name: Run tests
+        run: swift test
+
+      - name: Build app and DMG
+        run: |
+          ./scripts/build-app.sh
+          ./scripts/make-dmg.sh
+
+      - name: Checksum
+        run: |
+          cd dist
+          shasum -a 256 ./*.dmg | sed 's# \./# #' | tee SHA256SUMS.txt
+
+      - name: Release notes
+        run: ./scripts/release-notes.sh "${GITHUB_REF_NAME#v}" > release-notes.md
+
+      - name: Draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          FLAGS=""
+          case "${GITHUB_REF_NAME}" in
+            *-*) FLAGS="--prerelease" ;;
+          esac
+          gh release create "${GITHUB_REF_NAME}" dist/*.dmg dist/SHA256SUMS.txt \
+            --draft ${FLAGS} \
+            --title "QdrantBar ${GITHUB_REF_NAME#v}" \
+            --notes-file release-notes.md

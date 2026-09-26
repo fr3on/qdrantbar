@@ -152,6 +152,8 @@ assets/            App icon and logo
 
 Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) first, and follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 
+See the [roadmap](ROADMAP.md) for what is planned next.
+
 ## License
 
 [MIT](LICENSE)

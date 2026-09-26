@@ -1,0 +1,14 @@
+{
+  "time": 0.0012,
+  "status": "ok",
+  "result": {
+    "collections": [
+      {
+        "name": "articles"
+      },
+      {
+        "name": "products"
+      }
+    ]
+  }
+}

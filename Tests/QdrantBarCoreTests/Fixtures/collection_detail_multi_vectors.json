@@ -1,0 +1,26 @@
+{
+  "time": 0.0025,
+  "status": "ok",
+  "result": {
+    "status": "yellow",
+    "optimizer_status": "optimizing",
+    "vectors_count": 8200,
+    "indexed_vectors_count": 4100,
+    "points_count": 4100,
+    "segments_count": 2,
+    "config": {
+      "params": {
+        "vectors": {
+          "text": {
+            "size": 768,
+            "distance": "Cosine"
+          },
+          "image": {
+            "size": 512,
+            "distance": "Dot"
+          }
+        }
+      }
+    }
+  }
+}

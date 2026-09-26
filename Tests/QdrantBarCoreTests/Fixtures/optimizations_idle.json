@@ -1,0 +1,13 @@
+{
+    "result": {
+        "summary": {
+            "queued_optimizations": 0,
+            "queued_segments": 0,
+            "queued_points": 0,
+            "idle_segments": 5
+        },
+        "running": []
+    },
+    "status": "ok",
+    "time": 0.00052425
+}

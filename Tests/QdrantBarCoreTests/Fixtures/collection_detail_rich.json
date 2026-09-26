@@ -1,0 +1,29 @@
+{
+  "time": 0.003,
+  "status": "ok",
+  "result": {
+    "status": "yellow",
+    "optimizer_status": { "error": "Service internal error: No space left on device" },
+    "indexed_vectors_count": 2100000,
+    "points_count": 1714998,
+    "segments_count": 8,
+    "config": {
+      "params": {
+        "vectors": { "dense": { "size": 1024, "distance": "Cosine", "on_disk": true } },
+        "sparse_vectors": { "sparse": {} },
+        "shard_number": 2,
+        "replication_factor": 1,
+        "write_consistency_factor": 1,
+        "on_disk_payload": true
+      },
+      "hnsw_config": { "m": 16, "ef_construct": 100, "full_scan_threshold": 10000, "on_disk": false },
+      "optimizer_config": { "indexing_threshold": 20000 },
+      "quantization_config": { "scalar": { "type": "int8", "quantile": 0.99, "always_ram": true } }
+    },
+    "payload_schema": {
+      "year": { "data_type": "integer", "params": { "lookup": true }, "points": 1714998 },
+      "doc_type": { "data_type": "keyword", "points": 1714998 }
+    },
+    "update_queue": { "length": 1940 }
+  }
+}

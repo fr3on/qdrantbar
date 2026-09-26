@@ -1,0 +1,20 @@
+{
+  "time": 0.0018,
+  "status": "ok",
+  "result": {
+    "status": "green",
+    "optimizer_status": "ok",
+    "vectors_count": 15420,
+    "indexed_vectors_count": 15420,
+    "points_count": 15420,
+    "segments_count": 4,
+    "config": {
+      "params": {
+        "vectors": {
+          "size": 1536,
+          "distance": "Cosine"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "time": 0.002,
+  "status": "ok",
+  "result": [
+    { "name": "articles-6427506419721257-2026-09-06-19-32-24.snapshot", "creation_time": "2026-09-06T19:32:24", "size": 10951393280, "checksum": "e5b0" },
+    { "name": "articles-6427506419721257-2026-08-01-03-00-00.snapshot", "creation_time": null, "size": 9800000000 }
+  ]
+}

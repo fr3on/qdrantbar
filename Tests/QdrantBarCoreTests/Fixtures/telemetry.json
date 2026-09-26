@@ -1,0 +1,12 @@
+{
+  "time": 0.0031,
+  "status": "ok",
+  "result": {
+    "id": "node-mock-789",
+    "app": {
+      "version": "1.13.0",
+      "name": "qdrant"
+    },
+    "collections_count": 2
+  }
+}

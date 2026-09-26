@@ -12,12 +12,12 @@ Tracked in the [v0.2.0 milestone](https://github.com/fr3on/qdrantbar/milestone/1
 
 | Item | Why | Size |
 | :--- | :--- | :--- |
-| **Edit a server** (name, URL, environment, API key, insecure HTTP) | Today a server can only be added or deleted, so changing a key means re-adding it. | M |
-| **Keyboard shortcuts that work in the popover**: `⌘F` filter, `⌘R` refresh, `Esc` clear, `⌘,` Settings | Only `⌘,` and `⌘Q` exist, and only while the gear menu is open. | M |
-| **Check for updates** in Settings | One request to the GitHub Releases API, sent only when you press the button. | S |
-| **Notifications**, off by default and per server | Tell me when the server goes offline or returns, a collection is not green, or the optimizer reports an error. Debounced so a flapping server does not spam. | M |
-| **Lighter refresh for large servers** | Every refresh currently requests details for every collection. Load them lazily and cap concurrency so a server with hundreds of collections stays cheap. | M |
-| **Reliability and tests** | Fix the Keychain save race in Add Server, and move refresh and server-switching logic out of the 700-line `AppState` into Core types that can be unit tested. Only Core has tests today. | M |
+| [**Edit a server**](https://github.com/fr3on/qdrantbar/issues/1) (name, URL, environment, API key, insecure HTTP) | Today a server can only be added or deleted, so changing a key means re-adding it. | M |
+| [**Keyboard shortcuts that work in the popover**](https://github.com/fr3on/qdrantbar/issues/2): `⌘F` filter, `⌘R` refresh, `Esc` clear, `⌘,` Settings | Only `⌘,` and `⌘Q` exist, and only while the gear menu is open. | M |
+| [**Check for updates**](https://github.com/fr3on/qdrantbar/issues/3) in Settings | One request to the GitHub Releases API, sent only when you press the button. | S |
+| [**Notifications**](https://github.com/fr3on/qdrantbar/issues/4), off by default and per server | Tell me when the server goes offline or returns, a collection is not green, or the optimizer reports an error. Debounced so a flapping server does not spam. | M |
+| [**Lighter refresh for large servers**](https://github.com/fr3on/qdrantbar/issues/5) | Every refresh currently requests details for every collection. Load them lazily and cap concurrency so a server with hundreds of collections stays cheap. | M |
+| [**Reliability and tests**](https://github.com/fr3on/qdrantbar/issues/6) | Fix the Keychain save race in Add Server, and move refresh and server-switching logic out of the 700-line `AppState` into Core types that can be unit tested. Only Core has tests today. | M |
 
 ## 0.3.0: more depth
 

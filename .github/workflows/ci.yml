@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    name: Build & Test
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Show Swift version
+        run: swift --version
+
+      - name: Build
+        run: swift build -v
+
+      - name: Run Tests
+        run: swift test -v
+
+      - name: Package App Bundle
+        run: ./scripts/build-app.sh
+
+      - name: Package DMG
+        run: ./scripts/make-dmg.sh

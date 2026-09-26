@@ -1,0 +1,58 @@
+name: Bug report
+description: Something is wrong or missing in QdrantBar
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you expect, and what did you see instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Add a server at http://localhost:6333
+        2. Open the popover and click a collection
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: QdrantBar version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: qdrant
+    attributes:
+      label: Qdrant server version
+      description: Shown in the popover, or from `curl <your-url>/` on the server.
+      placeholder: "1.19.1"
+  - type: dropdown
+    id: connection
+    attributes:
+      label: How do you connect?
+      options:
+        - Local (localhost or 127.0.0.1)
+        - Remote over https
+        - Remote over http with "Allow insecure HTTP"
+        - Through an SSH tunnel
+        - Qdrant Cloud
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version and chip
+      placeholder: "macOS 15.2, Apple M1 Pro"
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or output
+      description: For a connection problem, paste the output of `curl -i <your-url>/healthz`. Remove any API key, hostnames and collection names you do not want public.

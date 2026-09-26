@@ -150,7 +150,7 @@ assets/            App icon and logo
 
 - **Screens from the real views.** A debug build can render the app's own views with fixture data to a PNG: `.build/debug/QdrantBar --snapshot /tmp/screens.png`. It never touches the network, the Keychain or your saved servers.
 
-Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) first.
+Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) first, and follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## License
 

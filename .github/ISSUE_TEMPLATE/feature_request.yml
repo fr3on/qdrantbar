@@ -1,0 +1,23 @@
+name: Feature request
+description: Suggest an idea for QdrantBar
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like to see?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you've considered
+  - type: markdown
+    attributes:
+      value: QdrantBar aims to stay small, read-only and private. Ideas that change server state (start, stop, delete, create snapshots), add analytics or add third-party dependencies are unlikely to be accepted.

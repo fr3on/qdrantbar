@@ -54,6 +54,10 @@ It replaces the `curl localhost:6333/collections` habit: one click shows whether
 
 ## Install
 
+### Download
+
+Get the latest `QdrantBar-<version>.dmg` from [Releases](https://github.com/fr3on/qdrantbar/releases), open it and drag QdrantBar to Applications. Then follow [Opening an unsigned build](#opening-an-unsigned-build) the first time.
+
 ### Build from source
 
 Needs macOS 14+ and a Swift 6 toolchain (Xcode or the Command Line Tools).
